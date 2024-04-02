@@ -2,7 +2,7 @@
 
 [![Flair](https://img.shields.io/badge/Powered%20by-Flair-ff69b4)](https://flair.dev)
 
-This package provides customizable ready-made processor scripts for basic event and transaction using [Flair indexer](https://docs.flair.dev).
+This package provides customizable ready-made processor scripts for basic event and transaction indexing; using [Flair indexer](https://docs.flair.dev).
 
 ## Installation
 
@@ -10,7 +10,7 @@ This package provides customizable ready-made processor scripts for basic event 
 
 2. Install the solution package:
 ```bash
-pnpm install @flair-sdk/solution-indexing-nft
+pnpm install @flair-sdk/solution-basic-events-txs
 ```
 
 3. Add the solution to your [manifest.yml.mustache](https://github.com/flair-sdk/starter-boilerplate/blob/main/manifest.yml.mustache) usually created from starter-boilerplate repository:

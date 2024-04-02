@@ -4,7 +4,7 @@ import {
     SolutionScriptFunction,
 } from 'flair-sdk'
 
-const PACKAGE_NAME = '@flair-sdk/basic-events-txs'
+const PACKAGE_NAME = '/Users/kasra/Documents/Documents/flair/indexing/solutions/solution-basic-events-txs'
 
 export type Config = {
     events?: {
@@ -16,7 +16,7 @@ export type Config = {
 }
 
 const definition: SolutionDefinition<Config> = {
-    prepareManifest: async (context, config, manifest) => {
+    prepareManifest: async (_context, config, manifest) => {
 
         if (config.events?.enabled) {
             manifest.processors = [
@@ -54,8 +54,8 @@ const definition: SolutionDefinition<Config> = {
         return manifest
     },
     registerScripts: (
-        context,
-        config,
+        _context,
+        _config,
     ): Record<string, SolutionScriptFunction> => {
         return {}
     },
