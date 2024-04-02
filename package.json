@@ -1,6 +1,6 @@
 {
   "name": "@flair-sdk/solution-basic-events-txs",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": false,
   "description": "Bundled solution to add basic event and transaction indexing",
   "type": "module",
