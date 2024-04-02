@@ -4,7 +4,7 @@ import {
     SolutionScriptFunction,
 } from 'flair-sdk'
 
-const PACKAGE_NAME = '/Users/kasra/Documents/Documents/flair/indexing/solutions/solution-basic-events-txs'
+const PACKAGE_NAME = 'flair-sdk/solution-basic-events-tx'
 
 export type Config = {
     events?: {
@@ -43,13 +43,13 @@ const definition: SolutionDefinition<Config> = {
         }
 
         manifest.processors = [
-                ...(manifest.processors || []),
-                {
-                    id: 'reorg',
-                    type: ProcessorType.Reorg,
-                    handler: `${PACKAGE_NAME}/src/processors/reorg/handler.ts`,
-                },
-            ]
+            ...(manifest.processors || []),
+            {
+                id: 'reorg',
+                type: ProcessorType.Reorg,
+                handler: `${PACKAGE_NAME}/src/processors/reorg/handler.ts`,
+            },
+        ]
 
         return manifest
     },

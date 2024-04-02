@@ -1,8 +1,8 @@
 {
-  "name": "@flair-sdk/solution-database-mongodb",
+  "name": "@flair-sdk/solution-basic-events-txs",
   "version": "0.1.6",
   "private": false,
-  "description": "Bundled solution to add MongoDB database sync to a Flair indexing cluster",
+  "description": "Bundled solution to add basic event and transaction indexing",
   "type": "module",
   "main": "./dist/src/index.js",
   "types": "./dist/types/index.d.ts",
