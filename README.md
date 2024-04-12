@@ -20,10 +20,8 @@ pnpm install @flair-sdk/solution-basic-events-txs
 # ...
 
 # Usually each indexing cluster has defined one or more filter groups.
-# For this solution you need a filter group that contains addresses of ERC721 contracts.
-# Also, this solution will add relevant event "topics" for ERC721 Transfer and Approval events
-# so that they are emitted for processing.
-#
+# For this solution you need a filter group that contains addresses of contracts you want to 
+# track
 # Note: if you have a factory contract, or need to dynamically add addresses it is possible,
 # refer to examples repository (https://github.com/flair-sdk/examples).
 filterGroups:
