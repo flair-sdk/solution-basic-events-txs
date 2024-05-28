@@ -13,10 +13,13 @@ export type Config = {
     transactions?: {
         enabled?: boolean
     }
+    abiDirectory?: string
 }
 
 const definition: SolutionDefinition<Config> = {
     prepareManifest: async (_context, config, manifest) => {
+
+        const abiDirectory = config.abiDirectory || `${PACKAGE_NAME}/src/abis/*.json`;
 
         if (config.events?.enabled) {
             manifest.processors = [
@@ -25,7 +28,7 @@ const definition: SolutionDefinition<Config> = {
                     id: 'basic-events',
                     type: ProcessorType.Event,
                     handler: `${PACKAGE_NAME}/src/processors/basic-events/handler.ts`,
-                    abi: `${PACKAGE_NAME}/src/abis/*.json`,
+                    abi: `${PACKAGE_NAME}/${abiDirectory}`,
                 },
             ]
         }
@@ -37,7 +40,7 @@ const definition: SolutionDefinition<Config> = {
                     id: 'basic-transactions',
                     type: ProcessorType.Transaction,
                     handler: `${PACKAGE_NAME}/src/processors/basic-transactions/handler.ts`,
-                    abi: `${PACKAGE_NAME}/src/abis/*.json`,
+                    abi: `${PACKAGE_NAME}/${abiDirectory}`,
                 },
             ]
         }
