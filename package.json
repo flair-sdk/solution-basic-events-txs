@@ -54,7 +54,7 @@
     "@flair-sdk/registry": "^2.27.0",
     "axios": "0.26.1",
     "ethers": "^5.7.2",
-    "flair-sdk": "^1.12.5",
+    "flair-sdk": "^1.14.0",
     "p-limit": "^5.0.0"
   }
 }
